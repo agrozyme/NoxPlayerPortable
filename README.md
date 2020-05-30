@@ -4,6 +4,8 @@ Fork form: https://github.com/BlueMagicalWolf/NoxPlayerPortable
 
 A script that will make a almost portable version of NoxPlayer (Windows Only)
 
+NoxPlayer Release Note: https://www.bignox.com/blog/category/releasenote/
+
 ## Tools
 
 all tools include in the repository
