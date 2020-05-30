@@ -20,7 +20,7 @@ all tools include in the repository
 
 ## How to launch
 
-to launch noxplayer, run the exe file in the noxplayer folder (normal you would use Nox.exe).
+to launch noxplayer, run the `Nox.exe` in the noxplayer folder.
 
 i need to find a way to redirect Program files since it cant run without Bignox and thats a problem since i cant get it to work in the same folder...
 

@@ -34,12 +34,13 @@ function Main {
   $Expand = $AssetFolder + '\7za.exe'
   $Bignox = $AssetFolder + '\Bignox.7z'
   $Converter = $AssetFolder + '\Bat_To_Exe_Converter.exe'
-  $CommandPattern = $AssetFolder + '\SecretRunScripts\*.cmd'
+  $NoxBatCommand = $AssetFolder + '\Nox.cmd'
 
   $NoxPlayerFolder = $PSScriptRoot + '\NoxPlayer'
   $NoxPlayerSetupFile = $NoxPlayerFolder + '\NoxPlayerSetup.exe'
   $NoxFolder = $NoxPlayerFolder + '\Nox'
   $Icon = $NoxFolder + '\bin\res\shortcut5.ico'
+  $NoxExeCommand = $NoxPlayerFolder + '\Nox.exe'
 
   Write-Host 'Creating NoxPlayer Folder...'
   New-Item -ItemType Directory -Path $NoxPlayerFolder -Force
@@ -57,12 +58,7 @@ function Main {
   Remove-Item -Path $NoxPlayerSetupFile -Force
 
   Write-Host 'Converting Commands...'
-  Get-ChildItem -Path $CommandPattern | ForEach-Object {
-    $FullName = $_.FullName
-    $Command = $NoxPlayerFolder + '\' + $_.BaseName + '.exe'
-    $ArgumentList = "/bat $FullName /exe $Command /invisible /icon $Icon"
-    Start-Process -Wait -NoNewWindow -ArgumentList $ArgumentList $Converter
-  }
+  & $Converter /bat $NoxBatCommand /exe $NoxExeCommand /invisible /icon $Icon
 
   Write-Host
   Write-Host 'Copy The NoxPlayer Folder To Where Ever You Like, Like A USB-Stick'
