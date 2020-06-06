@@ -28,7 +28,7 @@ function Pause([String] $Text = 'Press any key to continue ...') {
 }
 
 function Main {
-  $NoxPlayerSetupUri = 'http://res06.bignox.com/full/20200525/309a2a31cac647e88653f03d8703830b.exe?filename=nox_setup_v6.6.0.8_full_intl.exe'
+  $NoxPlayerSetupUri = 'http://res06.bignox.com/full/20200603/b64c981ffd054d61b6ef6f0560a90a86.exe?filename=nox_setup_v6.6.0.9_full_intl.exe'
 
   $AssetFolder = $PSScriptRoot + '\assets'
   $Expand = $AssetFolder + '\7za.exe'
