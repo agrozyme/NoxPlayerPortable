@@ -28,11 +28,13 @@ function Main () {
   Write-Host 'Set Nox Shortcut...'
   $Nox = Set-Shortcut ($DesktopPath + '\Nox.lnk')
   $Nox.TargetPath = $BinPath + '\Nox.exe'
+  $Nox.WorkingDirectory = $BinPath
   $Nox.Save()
 
   Write-Host 'Set MultiPlayerManager Shortcut...'
   $MultiPlayerManager = Set-Shortcut ($DesktopPath + '\MultiPlayerManager.lnk')
   $MultiPlayerManager.TargetPath = $BinPath + '\MultiPlayerManager.exe'
+  $MultiPlayerManager.WorkingDirectory = $BinPath
   $MultiPlayerManager.Save()
 }
 
