@@ -1,2 +1,3 @@
-@ECHO OFF
-powershell %CD%\Setup.ps1
+@Echo Off
+PowerShell %CD%\Setup.ps1
+Pause
