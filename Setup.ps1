@@ -23,7 +23,7 @@ function Receive-File([String] $Source, [String] $Destination) {
 }
 
 function Main {
-  $NoxPlayerSetupUri = 'http://res06.bignox.com/full/20200705/1bb906139cee42f8a0086dd951f85b6c.exe?filename=nox_setup_v6.6.1.1_full_intl.exe'
+  $NoxPlayerSetupUri = 'https://res06.bignox.com/full/20200811/ecd802549b2e4c16980afee69710f743.exe?filename=nox_setup_v6.6.1.2_full_intl.exe'
 
   $AssetFolder = $PSScriptRoot + '\assets'
   $Expand = $AssetFolder + '\7za.exe'
